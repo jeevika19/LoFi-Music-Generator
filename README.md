@@ -20,7 +20,7 @@ Here are the steps of execution:<br>
 12-Calculate losses between the input notes, offsets, and durations, and the generated notes, offsets, and durations during training.<br>
 13-Calculate the Kullback-Leibler (KL) divergence, which measures the similarity between two distributions, to optimize generative results.<br>
 <br>
-14-To generate a new sample:<br>
+To generate a new sample:<br>
 a. Generate a random list of floats representing the mean-variance vector.<br>
 b. Extract the latent representation of the sample using the mean-variance vector.<br>
 c. Run the decoder on the latent sample to generate chord embeddings, chord predictions, offset predictions, and duration predictions.<br>
