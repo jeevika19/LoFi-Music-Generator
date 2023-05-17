@@ -4,6 +4,7 @@ Using Variational Autoencoders (VAE) and Transformer-XL to generate 8-bit LoFi M
 <br>
 This project presents the development of an 8-bit LoFi music generator using deep learning techniques, specifically LSTM(short-term memory) and VAE(variational autoencoder)models. By training the model on the LoFi MIDI dataset andfine-tuning it using the NES Music Database (NesMDB), we aim to create a system capable of automatically generating an endless stream of new and rhythmic LoFi music with mel-low jazz-like beats. The VAE model is used to capture the underlying distribution of the LoFi music, while LSTM is employed to generate coherent and melodic sequences. To ensure the fidelity of the generated music, KL divergence is employed as a metric to measure the similarity between the generated and original music samples. The proposed system holds potential for enhancing YouTube live streams, offering a continuous stream of distinctive and soothing LoFi music.<br>
 <br>
+![alt text](DL_FINAL_SS.png "VAE ARCHITECTURE") <br>
 Here are the steps of execution:<br>
 1-Implement an encoder and a decoder architecture for the VAE model.<br>
 2-Prepare the input data, which consists of sequences of notes, offsets, and durations extracted from MIDI samples.<br>
@@ -18,7 +19,6 @@ Here are the steps of execution:<br>
 11-Train the VAE model for 500 epochs using a batch size of 32 and a chord length of 16.<br>
 12-Calculate losses between the input notes, offsets, and durations, and the generated notes, offsets, and durations during training.<br>
 13-Calculate the Kullback-Leibler (KL) divergence, which measures the similarity between two distributions, to optimize generative results.<br>
-<br>
 <br>
 14-To generate a new sample:<br>
 a. Generate a random list of floats representing the mean-variance vector.<br>
